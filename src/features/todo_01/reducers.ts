@@ -14,7 +14,7 @@ const todoReducer = (
   action: TodoActionTypes
 ): TodoState => {
   switch (action.type) {
-    case "ADD_TODO":
+    case "ADD_TODO": {
       const newTodo: Todo = {
         id: Date.now(),
         text: action.payload,
@@ -23,6 +23,7 @@ const todoReducer = (
       return {
         todos: [...state.todos, newTodo],
       };
+    }
     case "TOGGLE_TODO":
       return {
         todos: state.todos.map((todo) => {

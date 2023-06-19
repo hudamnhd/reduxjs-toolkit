@@ -10,7 +10,7 @@ const Content = () => {
 
   useEffect(() => {
     dispatch(fetchTodos());
-  }, []);
+  }, [dispatch]);
   if (loading) {
     return <div>Loading...</div>;
   }
